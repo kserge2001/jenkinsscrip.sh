@@ -13,17 +13,9 @@ apt-get install docker-ce docker-ce-cli containerd.io
 systemctl enable docker
 systemctl start docker
 usermod -aG docker ubuntu
-##Extra package
-apt-get install vim git -y
-
 ## Extra packages install
-apt install vim git -Y
+apt install vim git -y
 
-## Extra packages
-apt-get install vim git -y
-
-## extra packages
-apt-get install vim git -y 
 # run jenkins
 mkdir -p /var/jenkins_home
 chown -R 1000:1000 /var/jenkins_home/
@@ -31,4 +23,4 @@ docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -d
 
 # show endpoint
 echo 'Jenkins installed'
-echo 'You should now be able to access jenkins at: http://'$(curl -s ifconfig.co)':8080'
+echo 'You should now be able to access jenkins at: http://'$(curl -s ifconfig.co)':8080'#!/bin/bash
